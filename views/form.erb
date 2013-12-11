@@ -1,0 +1,17 @@
+<h1>Map My Route!</h1>
+<br><br>
+<form action="/form" method="POST">
+  <label for="POST-start">Start:</label>
+  <select id="POST-start" name="start">
+    <% @data.each do |docking_station|%>
+      <option value="<%=docking_station["name"]%>"><%=docking_station["name"]%></option>
+    <% end %>
+  </select>
+  <br>
+  <label for="POST-stop">End:</label>
+  <select id="POST-stop" name="end">
+    <% @data.each do |docking_station|%>
+      <option value="<%=docking_station["name"]%>"><%=docking_station["name"]%></option>
+    <% end %>
+  </select>
+</form>
