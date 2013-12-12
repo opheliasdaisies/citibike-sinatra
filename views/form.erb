@@ -1,6 +1,6 @@
 <h1>Map My Route!</h1>
 <br><br>
-<form action="/form" method="POST">
+<form action="/map" method="POST">
   <label for="POST-start">Start:</label>
   <select id="POST-start" name="start">
     <% @data.each do |docking_station|%>
@@ -16,6 +16,3 @@
   </select>
   <button type="submit" value="submit">Submit</button>
 </form>
-
-
-<p>You chose <%= params["start"] %> and <%= params["end"] %>.</p>

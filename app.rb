@@ -27,8 +27,8 @@ module Citibike
       erb :form
     end
 
-    post '/form' do
-      erb :form
+    post '/map' do
+      erb :map
     end
 
   end
