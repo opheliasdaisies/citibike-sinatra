@@ -28,6 +28,9 @@ module Citibike
     end
 
     post '/map' do
+      @start = params["start"]
+      @end = params["end"]
+
       erb :map
     end
 
