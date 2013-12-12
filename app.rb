@@ -27,5 +27,9 @@ module Citibike
       erb :form
     end
 
+    post '/form' do
+      erb :form
+    end
+
   end
 end
