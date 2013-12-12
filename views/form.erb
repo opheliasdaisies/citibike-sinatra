@@ -4,14 +4,14 @@
   <label for="POST-start">Start:</label>
   <select id="POST-start" name="start">
     <% @data.each do |docking_station|%>
-      <option value="<%=[docking_station["lat"],docking_station["lng"]]%>"><%=docking_station["name"]%></option>
+      <option value="<%=[docking_station["lat"]/1000000.to_f,docking_station["lng"]/1000000.to_f]%>"><%=docking_station["name"]%></option>
     <% end %>
   </select>
   <br>
   <label for="POST-stop">End:</label>
   <select id="POST-stop" name="end">
     <% @data.each do |docking_station|%>
-      <option value="<%=[docking_station["lat"],docking_station["lng"]]%>"><%=docking_station["name"]%></option>
+      <option value="<%=[docking_station["lat"]/1000000.to_f,docking_station["lng"]/1000000.to_f]%>"><%=docking_station["name"]%></option>
     <% end %>
   </select>
   <button type="submit" value="submit">Submit</button>
